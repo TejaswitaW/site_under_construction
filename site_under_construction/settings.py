@@ -48,6 +48,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'mysite.middlewares.SiteUnderConstructionMiddleware',
 ]
 
 ROOT_URLCONF = 'site_under_construction.urls'
