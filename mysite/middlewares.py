@@ -1,4 +1,4 @@
-from django.shortcuts import HttpResponse
+from django.shortcuts import HttpResponse,render
 
 
 class SiteUnderConstructionMiddleware:
@@ -7,6 +7,7 @@ class SiteUnderConstructionMiddleware:
 
     def __call__(self,request):
         # print("Call From Middleware Before View")
-        response = HttpResponse("This site is under construction,Please visit after some time.")
+        # response = HttpResponse("This Site is Under Construction")
+        response = render(request,'mysite/siteuc.html')
         # print("Call From Middleware After View")
         return response
